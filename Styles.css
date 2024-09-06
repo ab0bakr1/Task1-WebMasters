@@ -1,0 +1,694 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin: 0 10%;
+}
+/************** Header ****************/
+header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#0B9586;
+    padding: 10px 10%;
+    z-index: 100;
+}
+.logo{
+    width: 100px;
+    height: 40px;
+    background-color:#0b5f55;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+nav{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 50%;
+}
+nav li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: clamp(0.8rem,1.6vw,3rem);
+    padding: 10px;
+    position: relative;
+}
+nav li a:hover{
+    background-color: #0b5f55;
+    border-radius: 5px;
+}
+nav li a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    background-color: #022a26;
+    bottom: 0;
+    left: 0;
+    transition: 0.2s;
+    border-radius:5px;
+}
+nav li a:hover::after{
+    height: 5px;
+}
+.Call{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    color: white;
+    font-weight: 500;
+    font-size: clamp(0.8rem,1.6vw,3rem);
+    cursor: pointer;
+}
+@media (max-width:992px){
+    header{
+        padding: 10px 2%;
+    }
+}
+/************** Header END ****************/
+
+/************** Hero ************/
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url(./IMG/Hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100svh;
+}
+.Hero{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.Hero-pro{
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+    color: white;
+}
+.Hero-pro progress{
+    accent-color: #fff;
+}
+progress::-webkit-progress-bar {
+    background-color: #777;
+}
+progress::-webkit-progress-value {
+    background-color: #fff;
+}
+progress::-moz-progress-bar {
+    background-color: #fff;
+}
+.Hero-Title{
+    padding-right: 40%;
+}
+.Hero-Title h3{
+    font-size: clamp(2rem,3.5vw,4.5rem);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: #fff;
+    padding-bottom: 10px;
+}
+.Hero-Title p{
+    font-size: clamp(1rem,1.3vw,2rem);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: #fff;
+}
+.Hero-BTN{
+    display: flex;
+    gap: 20px;
+}
+.Hero-BTN input{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #0B9586;
+    color: #fff;
+    text-transform: capitalize;
+}
+.Hero-BTN :nth-child(2){
+    background-color: #FFBB1C;
+    color: #000;
+}
+@media (max-width:992px){
+    .Hero-Title{
+        padding-right: 0;
+    }
+}
+/************** Hero END ************/
+
+/************** Friendlist **********/
+.Friendlist{
+    padding: 50px 0;
+}
+.Friendlist-item{
+    display: flex;
+    justify-content: space-between;
+}
+.Friendlist-title{
+    width: 50%;
+}
+.Friendlist-title h2{
+    font-size: clamp(2rem,3.5vw,4.5rem);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: #000;
+    padding-bottom: 20px;
+}
+.Friendlist-title p{
+    font-size: clamp(1rem,1.1vw,1.5rem);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: #777;
+    padding-bottom: 20px;
+}
+.Friendlist-title h6{
+    font-size: clamp(1.2rem,1.3vw,1.8rem);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: #000;
+    padding-bottom: 20px;
+}
+.Friendlist-title h6 span{
+    color: #0B9586;
+}
+.Friendlist-img{
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+.Piece{
+    position: absolute;
+    bottom: 50px;
+    left: 5%;
+    background-color: #FFBB1C;
+    color: #000;
+    text-align: left;
+    padding: 10px 30px;
+    border-radius: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+@media (max-width:992px){
+    .Friendlist-item{
+        flex-direction: column;
+    }
+    .Friendlist-title{
+        width: 100%;
+    }
+    .Friendlist-img{
+        width: 100%;
+    }
+}
+/************** Friendlist END **********/
+
+/************** Power **********/
+.Power{
+    background: url(./IMG/Power.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.Power-item{
+    width: 50%;
+    height:60svh ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    color: #fff;
+}
+.Power-item h3{
+    font-size: clamp(2rem,2.5vw,3rem);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 800;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+}
+.Power-item p{
+    font-size: clamp(1rem,1.3vw,1.8rem);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+.Power-item input{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #FFBB1C;
+    color: #000;
+    text-transform: capitalize;
+}
+@media (max-width:992px){
+    .Power{
+        background-position: right;
+    }
+    .Power-item{
+        width: 100%;
+    }
+}
+/************** Power END **********/
+
+/************** Solar **********/
+.Solar{
+    padding: 50px 0;
+    text-align: center;
+}
+.Solar h2{
+    font-size: clamp(2rem,3.5vw,4.5rem);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: #000;
+    padding-bottom: 20px;
+}
+.Solar p{
+    font-size: clamp(1rem,1.1vw,1.4rem);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 400;
+    padding-bottom: 20px;
+    padding: 0 200px;
+}
+.Solar-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding-top:50px ;
+}
+.Solar-card{
+    width: 500px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Solar-card img{
+    width: 100%;
+}
+.Solar-card h6{
+    font-size: clamp(1rem,1.4vw,1.6rem);
+    font-weight: 700;
+    padding-left: 20px;
+    text-transform: capitalize;
+}
+.Solar-card p{
+    font-size: clamp(1rem,1.1vw,1.4rem);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 400;
+    padding: 0;
+    padding-left: 20px;
+}
+.Solar-card a{
+    font-size: clamp(1rem,1.1vw,1.4rem);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 400;
+    padding-left: 20px;
+    text-decoration: none;
+    color: #0B9586;
+}
+@media (max-width:992px){
+    .Solar p{
+        padding: 0;
+    }
+}
+/************** Solar END **********/
+
+/************** Repairs **********/
+.Repairs{
+    height: 50svh;
+    background: url(./IMG/Repairs.png);
+    background-size: cover;
+    position: relative;
+}
+.Repairs-item{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #000000ac;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    max-height: 90%;
+}
+.Repairs-item h3{
+    font-size: clamp(2rem,2.5vw,3rem);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 800;
+    text-transform: capitalize;
+    padding-bottom: 30px;
+}
+.Repairs-item p{
+    font-size: clamp(1rem,1.1vw,1.5rem);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+@media (max-width:992px){
+    .Repairs-item{
+        width: 80%;
+        padding: 20px;
+    }
+}
+/************** Repairs END **********/
+
+/************* Energy *************/
+.Energy{
+    padding: 50px 0;
+}
+.Energy-item{
+    display: flex;
+    justify-content: center;
+}
+.Energy-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+.Energy-info img{
+    width: 50px;
+    padding: 10px;
+    background-color: #3CAB90;
+    outline: #00000034 5px solid;
+    border-radius: 10px;
+}
+.Energy-info h3{
+    font-size: clamp(1.8rem,2vw,2.5rem);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.Energy-info p{
+    font-size: clamp(1rem,1.1vw,1.3rem);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+.Energy-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 0px;
+    justify-content: space-evenly;
+}
+.Energy-card{
+    width: 400px;
+    text-align: left;
+    padding: 10px 50px;
+    border: #3CAB90 solid 1px;
+    border-radius: 10px;
+}
+.Energy-card img{
+    width: 100%;
+}
+.Energy-card h5{
+    font-size: clamp(1rem,1.4vw,1.6rem);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 10px 0;
+}
+.Energy-card p{
+    font-size: clamp(1rem,1.1vw,1.2rem);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    padding: 20px 0;
+}
+.Energy-card a{
+    font-size: clamp(1rem,1.1vw,1.4rem);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: #0B9586;
+}
+@media (max-width:992px){
+    .Energy-item{
+        flex-direction: column;
+    }
+    .Energy-info{
+        width: 100%;
+    }
+    .Energy-card{
+        width: 100%;
+    }
+}
+
+/************* Energy END ************/
+
+/************ Values ***************/
+.Values{
+    padding: 50px 0;
+    text-align: center;
+}
+.Values h2{
+    font-size: clamp(2rem,2.5vw,3rem);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 800;
+    text-transform: capitalize;
+    padding-bottom: 30px;
+}
+.Values p{
+    font-size: clamp(1rem,1.1vw,1.5rem);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 400;
+    padding-bottom: 30px;
+}
+.Values-item{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.Values-card{
+    border: 1px solid #3CAB90;
+    padding: 20px 50px;
+    text-align: start;
+    background-color: #3cab8f10;
+    border-radius: 10px;
+    width: 400px;
+}
+.Values-card h6{
+    font-size: clamp(1rem,1.4vw,1.6rem);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 20px 0;
+}
+.Values-card p{
+    font-size: clamp(1rem,1.1vw,1.3rem);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: #000000ac;
+}
+/************ Values END *************/
+
+/************ About **************/
+.About{
+    padding: 50px 0;
+}
+.About-item{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.About-info{
+    padding-right: 10px;
+}
+.About-info h3{
+    font-size: clamp(1.8rem,2vw,2.5rem);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    padding: 20px 0;
+    text-transform: capitalize;
+}
+.About-info p{
+    font-size: clamp(1rem,1.1vw,1.3rem);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+.About-say{
+    padding: 40px;
+    background-color: #3cab8f34;
+    border-radius: 10px;
+}
+.say-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.say-top h6{
+    font-size: clamp(1rem,1.1vw,1.2rem);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    color: #0B9586;
+    text-transform: capitalize;
+}
+.About-say h4{
+    font-size: clamp(1rem,1.4vw,1.8rem);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    padding: 20px 0;
+    padding-right: 200px;
+    text-transform: capitalize;
+}
+.say-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    align-items: center;
+}
+.bottom-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.bottom-user{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size:clamp(1rem,1.1vw,1.2rem) ;
+    font-weight: 400;
+}
+.bottom-user h5{
+    font-size:clamp(1rem,1.2vw,1.3rem) ;
+    font-weight: 800;
+}
+.bottom-item{
+    display: flex;
+    gap: 30px;
+}
+.bottom-item p{
+    padding: 15px 20px;
+    border: #000 solid 1px;
+    border-radius: 50%;
+}
+@media (max-width:992px){
+    .About-item{
+        flex-direction: column;
+    }
+    .About-say h4{
+        padding-right: 0;
+    }
+}
+/************ About END ***************/
+
+/*********** Footer **************/
+footer{
+    background-color: #283646;
+    padding: 50px 0;
+}
+.Footer-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+.Links ul{
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    padding-top: 20px;
+}
+.Links ul li a{
+    font-size: clamp(1rem,1.1vw,1.3rem);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.Newsletter h5{
+    font-size: clamp(1rem,1.1vw,1.2rem);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    color: white;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+.Newsletter form{
+    display: flex;
+    background-color: #4d4d4d;
+    border-radius: 30px;
+    outline: #9b9b9b solid 1px;
+    width: clamp(25rem,30vw,40rem);;
+}
+.Newsletter form input{
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+.Newsletter form input[type="email"]{
+    width: 80%;
+    height: 50px;
+    border-radius: 30px 0 0 30px;
+    background-color: #4d4d4d;
+    color: #9b9b9b;
+}
+.Newsletter form input::placeholder{
+    color: #9b9b9b;
+}
+.Newsletter form input[type="submit"]{
+    width: 20%;
+    border-radius: 30px;
+    background-color: #FFBB1C;
+    color: white;
+}
+.Footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+.Footer-bottom ul{
+    display: flex;
+    gap: 20px;
+    list-style:none;
+}
+.Footer-bottom ul li a{
+    font-size: clamp(1rem,1.1vw,1.3rem);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    color: rgb(144, 144, 144);
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.Footer-bottom p{
+    font-size: clamp(1rem,1.1vw,1.3rem);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    color: rgb(144, 144, 144);
+    text-transform: capitalize;
+}
+@media (max-width:992px){
+    .Footer-top{
+        flex-direction: column;
+        text-align: center;
+    }
+    .Footer-bottom{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/*********** Footer END **************/
